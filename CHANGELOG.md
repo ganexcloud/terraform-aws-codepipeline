@@ -1,0 +1,10 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## 1.0.0 (2022-05-05)
+
+
+### Features
+
+* Add initial files ([c6406a4](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/c6406a426fbdf6f39a3417c4e092f0240e608599))
