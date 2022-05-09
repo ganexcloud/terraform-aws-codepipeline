@@ -122,7 +122,7 @@ POLICY
         "codepipeline:StartPipelineExecution"
       ],
       "Resource": [
-          "${aws_codepipeline.this.arn}"
+        "${aws_codepipeline.this.arn}"
       ]
     }
   ]
