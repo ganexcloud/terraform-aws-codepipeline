@@ -23,6 +23,7 @@ No modules.
 | [aws_cloudwatch_event_rule.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) | resource |
 | [aws_cloudwatch_event_target.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target) | resource |
 | [aws_codepipeline.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codepipeline) | resource |
+| [aws_codestarnotifications_notification_rule.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codestarnotifications_notification_rule) | resource |
 | [aws_iam_role.cloudwatch_event](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role.pipeline](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.inline_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
@@ -36,7 +37,10 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloudwatch_event_pattern"></a> [cloudwatch\_event\_pattern](#input\_cloudwatch\_event\_pattern) | (Optional) Required if create\_cloudwatch\_event\_rule = true. The event pattern described a JSON object. | `string` | `null` | no |
 | <a name="input_create_cloudwatch_event_rule"></a> [create\_cloudwatch\_event\_rule](#input\_create\_cloudwatch\_event\_rule) | (Required) Create CloudWatch Event Rule to automatically start pipeline when a change occurs. | `bool` | `false` | no |
+| <a name="input_create_notification_rule"></a> [create\_notification\_rule](#input\_create\_notification\_rule) | (Required) Create CloudWatch Event Rule to automatically start pipeline when a change occurs. | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name os resources | `string` | n/a | yes |
+| <a name="input_notification_rule_event_type_ids"></a> [notification\_rule\_event\_type\_ids](#input\_notification\_rule\_event\_type\_ids) | (Required) A list of event types associated with this notification rule. | `list(any)` | <pre>[<br>  "codepipeline-pipeline-pipeline-execution-started",<br>  "codepipeline-pipeline-pipeline-execution-failed",<br>  "codepipeline-pipeline-pipeline-execution-canceled",<br>  "codepipeline-pipeline-pipeline-execution-superseded"<br>]</pre> | no |
+| <a name="input_notification_rule_target"></a> [notification\_rule\_target](#input\_notification\_rule\_target) | (Optional) Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation. | `list(any)` | `[]` | no |
 | <a name="input_role_arn"></a> [role\_arn](#input\_role\_arn) | Optionally supply an existing role | `string` | `""` | no |
 | <a name="input_s3_bucket_name"></a> [s3\_bucket\_name](#input\_s3\_bucket\_name) | S3 bucket name | `string` | n/a | yes |
 | <a name="input_stages"></a> [stages](#input\_stages) | This list describes each stage of the build | `list(any)` | n/a | yes |

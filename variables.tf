@@ -41,3 +41,21 @@ variable "cloudwatch_event_pattern" {
   type        = string
   default     = null
 }
+
+variable "create_notification_rule" {
+  description = "(Required) Create CloudWatch Event Rule to automatically start pipeline when a change occurs."
+  type        = bool
+  default     = false
+}
+
+variable "notification_rule_event_type_ids" {
+  type        = list(any)
+  description = "(Required) A list of event types associated with this notification rule."
+  default     = ["codepipeline-pipeline-pipeline-execution-started", "codepipeline-pipeline-pipeline-execution-failed", "codepipeline-pipeline-pipeline-execution-canceled", "codepipeline-pipeline-pipeline-execution-superseded"]
+}
+
+variable "notification_rule_target" {
+  type        = list(any)
+  description = "(Optional) Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation."
+  default     = []
+}
