@@ -51,7 +51,7 @@ variable "create_notification_rule" {
 variable "notification_rule_event_type_ids" {
   type        = list(any)
   description = "(Required) A list of event types associated with this notification rule."
-  default     = ["codepipeline-pipeline-pipeline-execution-started", "codepipeline-pipeline-pipeline-execution-failed", "codepipeline-pipeline-pipeline-execution-canceled", "codepipeline-pipeline-pipeline-execution-superseded"]
+  default     = ["codepipeline-pipeline-pipeline-execution-failed", "codepipeline-pipeline-pipeline-execution-canceled", "codepipeline-pipeline-pipeline-execution-superseded"]
 }
 
 variable "notification_rule_target" {
