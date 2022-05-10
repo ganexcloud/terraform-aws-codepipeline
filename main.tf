@@ -78,6 +78,11 @@ resource "aws_s3_bucket" "this" {
   }
 }
 
+resource "aws_s3_bucket_notification" "this" {
+  bucket      = aws_s3_bucket.this.id
+  eventbridge = true
+}
+
 resource "aws_cloudwatch_event_rule" "this" {
   count         = var.create_cloudwatch_event_rule ? 1 : 0
   name          = "codepipeline-${var.name}-rule"
