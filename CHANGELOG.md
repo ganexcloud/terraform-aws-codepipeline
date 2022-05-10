@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.0...v1.1.1) (2022-05-10)
+
+
+### Bug Fixes
+
+* Add aws_s3_bucket_notification to enable eventbridge ([2198915](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/2198915a6c9c43e886e1b9679c4546ae0dee78e7))
+
 ## [1.1.0](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.0.0...v1.1.0) (2022-05-10)
 
 
