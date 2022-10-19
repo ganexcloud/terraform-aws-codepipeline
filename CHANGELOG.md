@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.2](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.1...v1.1.2) (2022-10-19)
+
+
+### Bug Fixes
+
+* Add cloudwatch_event_role outputs ([f455ca7](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/f455ca766c4905b5f6298390100fc547f4d962bb))
+
 ### [1.1.1](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.0...v1.1.1) (2022-05-10)
 
 
