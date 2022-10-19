@@ -54,6 +54,8 @@ No modules.
 | <a name="output_arn"></a> [arn](#output\_arn) | The codepipeline arn. |
 | <a name="output_bucket_arn"></a> [bucket\_arn](#output\_bucket\_arn) | The ARN of the S3 Bucket project. |
 | <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name) | The ARN of the S3 Bucket project. |
+| <a name="output_cloudwatch_event_role_arn"></a> [cloudwatch\_event\_role\_arn](#output\_cloudwatch\_event\_role\_arn) | ARN of the CloudWatch Event role created if var.create\_cloudwatch\_event\_rule is true |
+| <a name="output_cloudwatch_event_role_name"></a> [cloudwatch\_event\_role\_name](#output\_cloudwatch\_event\_role\_name) | Name of the CloudWatch Event role created if var.create\_cloudwatch\_event\_rule is true |
 | <a name="output_id"></a> [id](#output\_id) | The codepipeline ID. |
 | <a name="output_role_arn"></a> [role\_arn](#output\_role\_arn) | ARN of the pipeline role |
 | <a name="output_role_name"></a> [role\_name](#output\_role\_name) | Name of the pipeline role created if var.role\_arn is not supplied |

@@ -27,3 +27,13 @@ output "bucket_name" {
   value       = aws_s3_bucket.this.id
   description = "The ARN of the S3 Bucket project."
 }
+
+output "cloudwatch_event_role_arn" {
+  description = "ARN of the CloudWatch Event role created if var.create_cloudwatch_event_rule is true"
+  value       = var.create_cloudwatch_event_rule ? aws_iam_role.cloudwatch_event[0].arn : null
+}
+
+output "cloudwatch_event_role_name" {
+  description = "Name of the CloudWatch Event role created if var.create_cloudwatch_event_rule is true"
+  value       = var.create_cloudwatch_event_rule ? aws_iam_role.cloudwatch_event[0].name : null
+}
