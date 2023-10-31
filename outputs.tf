@@ -37,3 +37,13 @@ output "cloudwatch_event_role_name" {
   description = "Name of the CloudWatch Event role created if var.create_cloudwatch_event_rule is true"
   value       = var.create_cloudwatch_event_rule ? aws_iam_role.cloudwatch_event[0].name : null
 }
+
+output "webhook_url" {
+  description = "Name of the CloudWatch Event role created if var.create_cloudwatch_event_rule is true"
+  value       = var.webhook_enabled ? aws_codepipeline_webhook.this[0].url : null
+}
+
+output "webhook_secret" {
+  description = "Name of the CloudWatch Event role created if var.create_cloudwatch_event_rule is true"
+  value       = var.webhook_enabled ? random_string.webhook_secret : null
+}

@@ -2,11 +2,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
-module "codepipeline_notifications" {
-  source               = "ganexcloud/codepipeline-notifications/aws"
-  version              = "1.0.0"
-  lambda_function_name = "codepipeline_notifications"
-  sns_topic_name       = "codepipeline_notifications"
+module "lambda_notifications" {
+  source               = "ganexcloud/lambda-notifications/aws"
+  version              = "~> 1"
+  lambda_function_name = "lambda_notifications"
+  sns_topic_name       = "lambda_notifications"
   webhook_url          = "https://api.squadcast.com/v2/incidents/api/xxxxxxxxxxxxxxxxxxxx"
   messenger            = "squadcast"
 }
@@ -14,7 +14,7 @@ module "codepipeline_notifications" {
 
 module "codebuild" {
   source  = "ganexcloud/codebuild/aws"
-  version = "1.0.0"
+  version = "1.0.2"
   name    = "pipeline"
   codebuild_source = {
     type = "CODEPIPELINE"
@@ -106,7 +106,7 @@ EOF
   create_notification_rule = true
   notification_rule_target = [
     {
-      address = module.codepipeline_notifications.sns_topic_arn
+      address = module.lambda_notifications.sns_topic_arn
     }
   ]
 }
