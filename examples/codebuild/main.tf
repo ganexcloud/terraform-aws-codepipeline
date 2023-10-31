@@ -5,7 +5,7 @@ provider "aws" {
 # pipeline
 module "codebuild" {
   source  = "ganexcloud/codebuild/aws"
-  version = "1.0.0"
+  version = "1.0.2"
   name    = "pipeline"
   codebuild_source = {
     type = "CODEPIPELINE"
