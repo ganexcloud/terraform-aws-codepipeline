@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.3](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.2...v1.1.3) (2023-10-31)
+
+
+### Bug Fixes
+
+* add support to aws_codepipeline_webhook ([02dbef6](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/02dbef6c143731167eff7ba036f2cf03c630ebd7))
+
 ### [1.1.2](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.1...v1.1.2) (2022-10-19)
 
 
