@@ -152,3 +152,26 @@ resource "aws_codestarnotifications_notification_rule" "this" {
     }
   }
 }
+
+resource "random_string" "webhook_secret" {
+  count   = var.webhook_enabled ? 1 : 0
+  length  = 32
+  special = false
+}
+
+resource "aws_codepipeline_webhook" "this" {
+  count           = var.webhook_enabled ? 1 : 0
+  name            = var.name
+  authentication  = var.webhook_authentication
+  target_action   = var.webhook_target_action
+  target_pipeline = aws_codepipeline.this.name
+
+  authentication_configuration {
+    secret_token = local.webhook_secret
+  }
+
+  filter {
+    json_path    = var.webhook_filter_json_path
+    match_equals = var.webhook_filter_match_equals
+  }
+}
