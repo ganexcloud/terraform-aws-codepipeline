@@ -4,7 +4,7 @@ provider "aws" {
 
 module "lambda_notifications" {
   source               = "ganexcloud/lambda-notifications/aws"
-  version              = "1.0.0"
+  version              = "~> 1"
   lambda_function_name = "lambda_notifications"
   sns_topic_name       = "lambda_notifications"
   webhook_url          = "https://api.squadcast.com/v2/incidents/api/xxxxxxxxxxxxxxxxxxxx"
@@ -14,7 +14,7 @@ module "lambda_notifications" {
 
 module "codebuild" {
   source  = "ganexcloud/codebuild/aws"
-  version = "1.0.0"
+  version = "1.0.2"
   name    = "pipeline"
   codebuild_source = {
     type = "CODEPIPELINE"
