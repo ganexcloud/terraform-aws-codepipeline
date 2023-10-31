@@ -106,7 +106,7 @@ EOF
   create_notification_rule = true
   notification_rule_target = [
     {
-      address = module.codepipeline_notifications.sns_topic_arn
+      address = module.lambda_notifications.sns_topic_arn
     }
   ]
 }
