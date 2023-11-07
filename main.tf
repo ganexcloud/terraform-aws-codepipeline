@@ -174,4 +174,6 @@ resource "aws_codepipeline_webhook" "this" {
     json_path    = var.webhook_filter_json_path
     match_equals = var.webhook_filter_match_equals
   }
+
+  tags = var.tags
 }
