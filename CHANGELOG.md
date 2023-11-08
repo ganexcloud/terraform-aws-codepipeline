@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.5](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.4...v1.1.5) (2023-11-08)
+
+
+### Bug Fixes
+
+* add s3 tags ([cbf247c](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/cbf247cb01e000ce8f4bb5a219b611ff068f0577))
+
 ### [1.1.4](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.3...v1.1.4) (2023-11-07)
 
 
