@@ -22,14 +22,15 @@ POLICY
 resource "aws_iam_role_policy" "inline_policy" {
   count = var.role_arn == "" ? 1 : 0
   name  = local.role_name
-  role  = aws_iam_role.pipeline[0].name
 
+  role   = aws_iam_role.pipeline[0].name
   policy = data.aws_iam_policy_document.pipeline.json
 }
 
 resource "aws_codepipeline" "this" {
-  name     = var.name
-  role_arn = local.role_arn
+  name          = var.name
+  role_arn      = local.role_arn
+  pipeline_type = var.pipeline_type
 
   artifact_store {
     location = aws_s3_bucket.this.id
@@ -52,6 +53,7 @@ resource "aws_codepipeline" "this" {
         for_each = stage.value.action
         content {
           name             = action.value["name"]
+          namespace        = lookup(action.value, "namespace", null)
           owner            = action.value["owner"]
           version          = action.value["version"]
           category         = action.value["category"]
