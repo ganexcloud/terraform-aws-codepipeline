@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.6](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.5...v1.1.6) (2024-02-05)
+
+
+### Bug Fixes
+
+* add pipeline_type support ([e49f00a](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/e49f00adb0630f01fa420b369be27463e1561712))
+
 ### [1.1.5](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.4...v1.1.5) (2023-11-08)
 
 
