@@ -1,27 +1,33 @@
 variable "name" {
   type        = string
-  description = "Name os resources"
+  description = "(Required) Name os resources"
+}
+
+variable "pipeline_type" {
+  type        = string
+  description = "(Optional) Type of the pipeline. Possible values are: V1 and V2. Default value is V1."
+  default     = "V1"
 }
 
 variable "s3_bucket_name" {
   type        = string
-  description = "S3 bucket name"
+  description = "(Required) S3 bucket name"
 }
 
 variable "role_arn" {
   type        = string
-  description = "Optionally supply an existing role"
+  description = "(Optional) Supply an existing role"
   default     = ""
 }
 
 variable "stages" {
-  type        = list(any)
-  description = "This list describes each stage of the build"
+  type        = any
+  description = "(Required) This list describes each stage of the build"
 }
 
 variable "tags" {
   type        = map(any)
-  description = "Implements the common tags scheme"
+  description = "(Optional) Implements the common tags scheme"
   default     = {}
 }
 #
@@ -62,30 +68,30 @@ variable "notification_rule_target" {
 
 variable "webhook_enabled" {
   type        = bool
-  description = "Set to false to prevent the module from creating any webhook resources"
+  description = "(Required) Set to false to prevent the module from creating any webhook resources"
   default     = false
 }
 
 variable "webhook_target_action" {
   type        = string
-  description = "The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline"
+  description = "(Optional) The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline"
   default     = "Source"
 }
 
 variable "webhook_authentication" {
   type        = string
-  description = "The type of authentication to use. One of IP, GITHUB_HMAC, or UNAUTHENTICATED"
+  description = "(Optional) The type of authentication to use. One of IP, GITHUB_HMAC, or UNAUTHENTICATED"
   default     = "GITHUB_HMAC"
 }
 
 variable "webhook_filter_json_path" {
   type        = string
-  description = "The JSON path to filter on"
+  description = "(Optional) The JSON path to filter on"
   default     = "$.ref"
 }
 
 variable "webhook_filter_match_equals" {
   type        = string
-  description = "The value to match on (e.g. refs/heads/{Branch})"
+  description = "(Optional) The value to match on (e.g. refs/heads/{Branch})"
   default     = "refs/heads/{Branch}"
 }
