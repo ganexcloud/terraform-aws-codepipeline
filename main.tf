@@ -28,9 +28,9 @@ resource "aws_iam_role_policy" "inline_policy" {
 }
 
 resource "aws_codepipeline" "this" {
-  name          = var.name
-  role_arn      = local.role_arn
-  pipeline_type = var.pipeline_type
+  name     = var.name
+  role_arn = local.role_arn
+  #pipeline_type = var.pipeline_type
 
   artifact_store {
     location = aws_s3_bucket.this.id

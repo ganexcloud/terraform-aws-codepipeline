@@ -14,6 +14,12 @@ variable "s3_bucket_name" {
   description = "(Required) S3 bucket name"
 }
 
+variable "role_name" {
+  type        = string
+  description = "(Optional) Custom role name"
+  default     = ""
+}
+
 variable "role_arn" {
   type        = string
   description = "(Optional) Supply an existing role"
