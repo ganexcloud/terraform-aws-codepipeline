@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.7](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.6...v1.1.7) (2024-07-23)
+
+
+### Bug Fixes
+
+* add custom role name ([c92625c](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/c92625c1bb08dc415210f92661267e0ea4cfbc90))
+* adjusts ([73b4abe](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/73b4abee25295cafcbb26f66a0aac82f34ffdd75))
+
 ### [1.1.6](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.5...v1.1.6) (2024-02-05)
 
 
