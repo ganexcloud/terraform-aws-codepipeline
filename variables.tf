@@ -6,7 +6,7 @@ variable "name" {
 variable "pipeline_type" {
   type        = string
   description = "(Optional) Type of the pipeline. Possible values are: V1 and V2. Default value is V1."
-  default     = "V1"
+  default     = "V2"
 }
 
 variable "s3_bucket_name" {
