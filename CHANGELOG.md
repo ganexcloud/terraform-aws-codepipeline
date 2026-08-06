@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.10](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.9...v1.1.10) (2026-08-06)
+
+### Bug Fixes
+
+* **ci:** pin terraform-docs image ([8a3bd43](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/8a3bd432b6e22ccd79d9f5cfaea50b4de2e81463))
+* **docs:** align provider version ([b8d991c](https://github.com/ganexcloud/terraform-aws-codepipeline/commit/b8d991c059a481bc0c08c793ad853eb65a8edf1d))
+
 ### [1.1.9](https://github.com/ganexcloud/terraform-aws-codepipeline/compare/v1.1.8...v1.1.9) (2025-11-08)
 
 
